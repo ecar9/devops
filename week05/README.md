@@ -10,12 +10,12 @@
 - 이미지는 클래스, 컨테이너는 인스턴스
 
 ### 도커명령어
-docker run -d -p `포트번호` --name `컨테이너 이름` `이미지 이름`
-docker ps `(-a)`
-docker images
-docker logs web
-docker stop `컨테이너 이름`
-docker rm -f `컨테이너 삭제` (허나 이미지는 남아 있음)
+- docker run -d -p `포트번호` --name `컨테이너 이름` `이미지 이름`
+- docker ps `(-a)`
+- docker images
+- docker logs web
+- docker stop `컨테이너 이름`
+- docker rm -f `컨테이너 삭제` (허나 이미지는 남아 있음)
 
 ### 깃 새로운 명령어
 |git stash| 커밋 안 한 디렉토리 임시 보관 후 작업 디렉토리를 정리|

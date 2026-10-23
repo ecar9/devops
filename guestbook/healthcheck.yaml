@@ -1,0 +1,18 @@
+services:
+  web:
+    depends_on:
+      redis: # - redis에서 - 제거 후 : 추가
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c","import urllib.request; urllib.request.urlopen('https://localhost:5000/readyz')"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis:
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a","${REDIS_PASSWORD}", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
